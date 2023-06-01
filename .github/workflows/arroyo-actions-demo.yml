@@ -1,0 +1,13 @@
+name: Arroyo Action Demo
+on: [push]
+jobs:
+  First-GitHub-Actions:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "👍 Job inicializado"
+      - run: echo "🤦‍♀️ Primera ejececucion ${{ runner.os }}"
+      - run: echo "✔ ya casi terminaj... pero estamos con el Branch ${{ github.ref }}"
+      - name: Get Repository
+        uses: actions/checkout@v3
+      - run: echo "Repositorio ${{ github.repository }}"
+      - run: echo "Hemos terminado"
